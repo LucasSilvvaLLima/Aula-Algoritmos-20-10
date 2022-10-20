@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Quantas Coca-colas ja bebeu na vida? <input type="text" id="in_latas"></p>
+    <button onclick="ver_quantidade()">Ver a quantidade</button><br><br>
+    <div id="div_coca_cola"></div>
+    
+
+</body>
+</html>
+<script>
+    function ver_quantidade(){
+        div_coca_cola.innerHTML = ""
+        var latas = Number(in_latas.value)
+
+        for(var i = 0; i < latas; i++){
+            div_coca_cola.innerHTML += `<img src="https://www.imagensempng.com.br/wp-content/uploads/2022/01/2442.png" style="height: 100px;">`
+        }
+    }
+</script>

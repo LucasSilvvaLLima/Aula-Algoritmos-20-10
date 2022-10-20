@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Repetindo mantras</h2>
+
+    <button onclick="repetir5()">Repetir 5x</button>
+    <br><br>
+    <input placeholder="Repetições" id="in_repeticoes">
+    <br><br>
+    <input placeholder="Frase" id="in_frase">
+    <br><br>
+    <button onclick="repetir()">Repetir N vezes</button>
+    <br><br>
+    <div id="div_repeticoes"></div>
+</body>
+
+</html>
+<script>
+    function repetir5() {
+        div_repeticoes.innerHTML = ""
+
+        // var contador = 0; (1 -> Setup / inicialização (1x) )
+        // contador < 5; ( 2 -> Condição de repetição)
+        // contador++; (3 -> Última linha virtual dentro do for "É executada quando todas as linhas dentro do for são executaadas")
+        for (var contador = 0; contador < 5; contador++) {
+            div_repeticoes.innerHTML += `Foco força e Fé <br>`
+        }
+    }
+    function repetir(){
+        div_repeticoes.innerHTML = ""
+        var repeitir_n = Number(in_repeticoes.value)
+        var frase = in_frase.value
+        for(var contador = 0; contador < repeitir_n; contador++){
+            div_repeticoes.innerHTML += `${contador + 1}° ${frase}. <br>`
+        }
+    }
+</script>

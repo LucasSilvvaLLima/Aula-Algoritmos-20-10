@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Digite o  limite superior da amostragem: <input type="text" id="in_superior"></p>
+    <button onclick="contar5()">Contar</button><br><br>
+    <div id="div_contar"></div>
+</body>
+</html>
+<script>
+    function contar5(){
+        div_contar.innerHTML = ""
+        var maximo = Number(in_superior.value)
+
+        var numeroValido = maximo < 100
+
+        if (!numeroValido) {
+            div_contar.innerHTML = "O número máximo tem que ser menor que 100" 
+        } else {
+            for(var i = 5; i <= maximo; i++){
+                div_contar.innerHTML += `${i} <br>`
+            }
+        }
+    }
+</script>
