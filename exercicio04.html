@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <p>Digite o primeiro número: <input type="text" id="in_n1"></p>
     <p>Digite o ultimo número: <input type="text" id="in_n2"></p>
     <button onclick="contar()">Contar</button>
     <div id="div_resultado"></div>
 </body>
+
 </html>
 <script>
-    function contar(){
+    function contar() {
         div_resultado.innerHTML = ""
         var n1 = Number(in_n1.value)
         var n2 = Number(in_n2.value)
@@ -23,13 +26,14 @@
         var n2Valido = n2 < 100
 
         if (!n1Valido || !n2Valido) {
-            if(!n1Valido){
-                div_resultado.innerHTML = "O primeiro número tem que ser maior que 1" 
-            }else if (!n2Valido) {
-                div_resultado.innerHTML = "O ultimo número tem que ser menor que 100" 
+            if (!n1Valido) {
+                div_resultado.innerHTML = "O primeiro número tem que ser maior que 1 <br>"
+            } 
+            if (!n2Valido) {
+                div_resultado.innerHTML += "O ultimo número tem que ser menor que 100"
             }
         } else {
-            for(var i = n1; i <= n2; i++){
+            for (var i = n1; i <= n2; i++) {
                 div_resultado.innerHTML += `${i}<br>`
             }
         }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Quantos depósitos você no banco: <input type="text" id="in_depositos"></p>
+    <p>Qual o valor de cada depósito <input type="text" id="in_valor"></p>
+    <button onclick="acompanhar_grana()">Acompanhar grana</button>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+    function acompanhar_grana(){
+        div_resultado.innerHTML = ""
+        var depositos = Number(in_depositos.value)
+        var valor = Number(in_valor.value)
+        var saldo = 0
+        for(var contador = 0; contador < depositos; contador++){
+            saldo += valor
+            div_resultado.innerHTML += `${contador + 1}° Mês: R$ ${saldo}<br>`
+        }
+        div_resultado.innerHTML += ` Total guardado: R$${saldo}`
+    }
+</script>
